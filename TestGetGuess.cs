@@ -8,8 +8,18 @@ namespace PersonalProject2
         {
             Console.WriteLine($"Type in sleep. You should see a green S, and you should see a red L, E, E, P");
             string input = Program.GetGuess("stunt");
+            string expected = "SLEEP";
+            if (input != expected){
+                Console.Error.WriteLine($"Expected result to be 'Sleep' but was {result}");
+                return false;
+            }
             Console.WriteLine($"Type in sugar. You should see a green S, //& a yellow U, and you should see a red G, A, R");
             input = Program.GetGuess("stunt");
+            string expected = "SUGAR";
+            if (input != expected){
+                Console.Error.WriteLine($"Expected result to be 'Sugar' but was {result}");
+                return false;
+            }
             Console.WriteLine($"Type in the word stunt. You should expect all the letters to be green");
             input = Program.GetGuess("stunt");
 
@@ -17,8 +27,20 @@ namespace PersonalProject2
             string input2 = Program.GetGuess("cones");
             Console.WriteLine($"Type in the word kopes. You should see an error message due to the input of a nonexistent word. Now type boats. You should see a Green O, S //& a Red B, A, T ");
             input2 = Program.GetGuess("cones");
-            Console.WriteLine($"Type in the word cones. You should expect all letters to be green.")
+            Console.WriteLine($"Type in the word cones. You should expect all letters to be green.");
             input2 = Program.GetGuess("cones");
+
+            Console.WriteLine($"Type in the word alone. You should see a green A, L, O, //& a red N, E");
+            string input3 = Program.GetGuess("aloha");
+            string expected = "ALONE";
+            if (input != expected){
+                Console.Error.WriteLine($"Expected result to be 'ALONE' but was {result}");
+                return false;
+            }
+            Console.WriteLine($"Type in the word aloha. You should expect all letters to be green.");
+            input3 = Program.GetGuess("aloha");
+
+            
 
 
             return false;
