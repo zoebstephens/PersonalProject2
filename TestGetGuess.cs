@@ -11,42 +11,39 @@ namespace PersonalProject2
             // users value. It should only validate that the value entered is valid. For
             // example, if the user types ing "chocolate", it shouldn't be valid because the
             // word "chocolate" is too long.
-            Console.WriteLine($"Type in sleep. You should see a green S, and you should see a red L, E, E, P");
+            Console.WriteLine($"Type in sleep.");
             string result = Program.GetGuess("stunt");
             string expected = "SLEEP";
             if (result != expected){
                 Console.Error.WriteLine($"Expected result to be 'Sleep' but was {result}");
                 return false;
             }
-            Console.WriteLine($"Type in sugar. You should see a green S, //& a yellow U, and you should see a red G, A, R");
-            result = Program.GetGuess("stunt");
+            
+            Console.WriteLine($"Type in sugar.");
+            result = Program.GetGuess("sugar");
             expected = "SUGAR";
             if (result != expected){
                 Console.Error.WriteLine($"Expected result to be 'Sugar' but was {result}");
                 return false;
             }
-            Console.WriteLine($"Type in the word stunt. You should expect all the letters to be green");
-            result = Program.GetGuess("stunt");
 
-            Console.WriteLine($"Type in the word joke. You should see an error message due to the length of the word. Now type in jokes. You should see a green O, E, S //& a red J, K");
-            string result2 = Program.GetGuess("cones");
-            Console.WriteLine($"Type in the word kopes. You should see an error message due to the input of a nonexistent word. Now type boats. You should see a Green O, S //& a Red B, A, T ");
-            result2 = Program.GetGuess("cones");
-            Console.WriteLine($"Type in the word cones. You should expect all letters to be green.");
-            result2 = Program.GetGuess("cones");
-
-            Console.WriteLine($"Type in the word alone. You should see a green A, L, O, //& a red N, E");
-            string result3 = Program.GetGuess("aloha");
-            expected = "ALONE";
+            Console.WriteLine($"Type in the word joke. You should see an error message due to the length of the word being too short.");
+            Console.WriteLine($"Type in the word cones.");
+            result = Program.GetGuess("cones");
+            expected = "CONES";
             if (result != expected){
-                Console.Error.WriteLine($"Expected result to be 'ALONE' but was {result}");
+                Console.Error.WriteLine($"Expected result to be 'Cones' but was {result}");
                 return false;
             }
-            Console.WriteLine($"Type in the word aloha. You should expect all letters to be green.");
-            result3 = Program.GetGuess("aloha");
 
-            
-
+            Console.WriteLine($"Type in the word project.You should see an error message due to the length of the word being too long.");
+            Console.WriteLine($"Type in the word aloha.");
+            string result3 = Program.GetGuess("aloha");
+            expected = "ALOHA";
+            if (result != expected){
+                Console.Error.WriteLine($"Expected result to be 'ALOHA' but was {result}");
+                return false;
+            }
 
             return false;
         }

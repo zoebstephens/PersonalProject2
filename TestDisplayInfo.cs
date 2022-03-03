@@ -15,7 +15,7 @@ namespace PersonalProject2
             Console.WriteLine($"You should expect to see a Green R, A, //& a Red T, I, N");
             Program.DisplayInfo("train", "crazy");
 
-            Console.WriteLine($"You should expec to see a green C, R, A, Z, Y");
+            Console.WriteLine($"You should expect to see a green C, R, A, Z, Y");
             Program.DisplayInfo("crazy", "crazy");
 
 
