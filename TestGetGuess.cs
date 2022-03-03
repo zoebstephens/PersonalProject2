@@ -6,6 +6,11 @@ namespace PersonalProject2
     {
         public static bool RunTest()
         {
+            // Feedback(jcollard 2022-03-03): Great job on this test! Double check the 
+            // flow chart for this method. It doesn't actually display the result of the 
+            // users value. It should only validate that the value entered is valid. For
+            // example, if the user types ing "chocolate", it shouldn't be valid because the
+            // word "chocolate" is too long.
             Console.WriteLine($"Type in sleep. You should see a green S, and you should see a red L, E, E, P");
             string result = Program.GetGuess("stunt");
             string expected = "SLEEP";
