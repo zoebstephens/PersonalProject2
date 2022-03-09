@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/Users/sofistephens/.nuget/packages/": {}
+    "/Users/zoestephens/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sofistephens/Documents/GitHub/PersonalProject2/PersonalProject2.csproj",
+      "projectUniqueName": "/Users/zoestephens/Documents/GitHub/PersonalProject2/PersonalProject2.csproj",
       "projectName": "PersonalProject2",
-      "projectPath": "/Users/sofistephens/Documents/GitHub/PersonalProject2/PersonalProject2.csproj",
-      "packagesPath": "/Users/sofistephens/.nuget/packages/",
-      "outputPath": "/Users/sofistephens/Documents/GitHub/PersonalProject2/obj/",
+      "projectPath": "/Users/zoestephens/Documents/GitHub/PersonalProject2/PersonalProject2.csproj",
+      "packagesPath": "/Users/zoestephens/.nuget/packages/",
+      "outputPath": "/Users/zoestephens/Documents/GitHub/PersonalProject2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/sofistephens/.nuget/NuGet/NuGet.Config"
+        "/Users/zoestephens/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.403/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

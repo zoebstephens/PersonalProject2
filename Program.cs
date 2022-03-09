@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PersonalProject2
 {
@@ -14,6 +15,17 @@ namespace PersonalProject2
                 return; // Exits the program
             }
             // otherwise the program continues executing
+            string correct = GetRandomWord();
+            string guess = "";
+            while (guess != correct)
+            {
+                guess = GetGuess(correct);
+                DisplayInfo(guess, correct);
+                Console.WriteLine();
+            }
+            Console.WriteLine($"You won!");
+        
+
         }
 
 
@@ -31,7 +43,7 @@ namespace PersonalProject2
 
 
         }
-        public static void GetRandomWord()
+        public static string GetRandomWord()
         {
             List<string> words = new List<string>();
             words.Add("candy");
@@ -48,12 +60,13 @@ namespace PersonalProject2
             int index = generator.Next(0, words.Count);
 
             string randomWord = words[index];
-            Console.WriteLine($"Your word in {randomWord}");
+        
             // 1. Load a filed called `words.txt`
             // 2. Store each line as a separate word in a list named `words`
             // 3. Generate a random number between 0 and `words.Count` and store the result in
             //    a variable called `ix`
             // 4. Return the word at position `ix`. (e.g. `words[ix]`)
+            return randomWord;
         }
 
         public static string GetGuess(string correctWord)
@@ -70,21 +83,15 @@ namespace PersonalProject2
                 Console.Write("Enter a guess that is 5 letters long:");
                 input = Console.ReadLine();
 
-                bool isAGuess = int.TryParse(input, out userChoice);
 
                 if (input.Length != 5)
                 {
-                    Console.Error.WriteLine("You did not enter a number.");
+                    Console.Error.WriteLine("That guess is not 5 letters long");
                 }
-                else if (userChoice <= 1000)
-                {
-                    Console.WriteLine("That number is not greater than 1000.");
-                }
-
             }
-            while (userChoice <= 1000);
+            while (input.Length != 5);
 
-            return userChoice;
+            return input;
 
         }
 
@@ -115,14 +122,23 @@ namespace PersonalProject2
             // Use the DisplayCharInfo method to determine what color to print the character
         }
 
-        public static string DisplayCharInfo(char guess, int pos, string correct)
+        public static void DisplayCharInfo(char guess, int pos, string correct)
         {
-            // If the guess is in the correct position, select the color green.
-            // If the guess is in the correct word but not correct position, select yellow.
-            // If the guess is not in the correct word, select red.
-            // Display the guess
-            // Reset the color back to white before returning
-            return null;
+            if (guess == correct[pos])
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else if (correct.Contains(guess))
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+            Console.Write(guess);
+            Console.ForegroundColor = ConsoleColor.White;
+
         }
 
 

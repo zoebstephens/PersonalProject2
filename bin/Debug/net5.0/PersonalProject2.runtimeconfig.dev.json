@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/sofistephens/.dotnet/store/|arch|/|tfm|",
-      "/Users/sofistephens/.nuget/packages"
+      "/Users/zoestephens/.dotnet/store/|arch|/|tfm|",
+      "/Users/zoestephens/.nuget/packages"
     ]
   }
 }
