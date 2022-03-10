@@ -24,7 +24,7 @@ namespace PersonalProject2
                 Console.WriteLine();
             }
             Console.WriteLine($"You won!");
-        
+
 
         }
 
@@ -43,6 +43,12 @@ namespace PersonalProject2
 
 
         }
+
+        /// <summary>
+        /// Randomly generates a random word to be guessed.
+        /// </summary>
+        /// <param name="words"></param>
+        /// <returns></returns>
         public static string GetRandomWord()
         {
             List<string> words = new List<string>();
@@ -60,7 +66,7 @@ namespace PersonalProject2
             int index = generator.Next(0, words.Count);
 
             string randomWord = words[index];
-        
+
             // 1. Load a filed called `words.txt`
             // 2. Store each line as a separate word in a list named `words`
             // 3. Generate a random number between 0 and `words.Count` and store the result in
@@ -68,6 +74,12 @@ namespace PersonalProject2
             // 4. Return the word at position `ix`. (e.g. `words[ix]`)
             return randomWord;
         }
+
+        /// <summary>
+        /// Asks the user to make a guess and validates the input before returning the guess.
+        /// </summary>
+        /// <param name="correctWord"></param>
+        /// <returns></returns>
 
         public static string GetGuess(string correctWord)
         {
@@ -95,6 +107,13 @@ namespace PersonalProject2
 
         }
 
+        /// <summary>
+        /// Given a guess and the correct word to be guessed, displays the guess to the screen coloring each character based on its position and if it is in the correct word.
+        /// </summary>
+        /// <param name="guess"></param>
+        /// /// <param name="correct"></param>
+        /// <returns></returns>
+
         public static void DisplayInfo(string guess, string correct)
         {
             if (guess == null)
@@ -121,6 +140,14 @@ namespace PersonalProject2
             // If they match, iterate through each character:
             // Use the DisplayCharInfo method to determine what color to print the character
         }
+
+        /// <summary>
+        /// Given a guessed character, the position of that guess, and the correct word, select the correct color for the guess and write it to the console.
+        /// </summary>
+        /// <param name="guess"></param>
+        /// <param name="pos"></param>
+        /// /// <param name="correct"></param>
+        /// <returns></returns>
 
         public static void DisplayCharInfo(char guess, int pos, string correct)
         {
